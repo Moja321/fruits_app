@@ -54,6 +54,11 @@ db.on("disconnected", () => {
 const fruitsController = require("./controllers/fruit_controller.js");
 app.use("/fruits", fruitsController);
 
+//To redirect to fruits controller
+app.get("/",(req,res)=>{
+  res.redirect("/fruits");
+});
+
 //Example of different controllers
 //const plantsController = require("./controllers/plants_controller.js");
 //const flowersController = require("./controllers/flowers_controller.js");
